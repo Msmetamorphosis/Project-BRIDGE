@@ -4,61 +4,103 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project BRIDGE</title>
+
 <style>
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4efe7;
-        color: #3a3a3a;
+        font-family: "Georgia", serif;
+        color: #222;
+        background: #F1E8D3;
     }
+
     header {
-        background: #c8b7a6;
-        padding: 40px 20px;
+        background: #9C5B48;
+        padding: 80px 20px;
         text-align: center;
     }
+
     header h1 {
         font-size: 48px;
-        margin: 0;
-        color: #4a3b2f;
+        margin-bottom: 10px;
+        font-family: "Georgia", serif;
+        color: #8AA28A; /* Sage green (matches footer) */
     }
-    .section {
-        padding: 50px 20px;
-        max-width: 900px;
+
+    header p {
+        font-size: 20px;
+        max-width: 750px;
         margin: auto;
+        line-height: 1.6;
+        color: #8AA28A; /* Sage green (matches footer) */
     }
-    .section h2 {
-        color: #4a3b2f;
-        font-size: 32px;
-        margin-bottom: 15px;
+
+    .section {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 20px;
     }
-    .poster, .bio, .goals, .projects {
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-family: "Georgia", serif;
+        color: #2b2b2b;
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+        margin-bottom: 40px;
+    }
+
+    .photo-slot {
+        width: 220px;
+        height: 220px;
+        background: #e9dcc4;
+        border-radius: 12px;
+        margin: 20px auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bridge-poster {
+        max-width: 100%;
+        border-radius: 12px;
+        margin-top: 20px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .project-card {
         background: #ffffff;
         border-radius: 12px;
         padding: 25px;
-        margin-bottom: 40px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
-    img {
-        max-width: 100%;
-        border-radius: 10px;
+
+    footer {
+        background: #8AA28A;
+        padding: 50px 20px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 18px;
     }
-    .photo-slot {
-        width: 200px;
-        height: 200px;
-        background: #e0d7ce;
-        border-radius: 100px;
-        margin: 20px auto;
-    }
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-    .project-card {
-        background: #f6f2ed;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+    .btn {
+        background: #d9a84f;
+        color: #222;
+        padding: 14px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 25px;
     }
 </style>
 </head>
@@ -67,43 +109,72 @@
 
 <header>
     <h1>Project BRIDGE</h1>
-    <p>Blockchain Receipt Intelligence for Developing Greater Equity</p>
+    <p>Blockchain Receipt Intelligence for Developing Greater Equity  
+    Tokenizing Financial Inclusion Through Computer Vision–Based Receipt Verification</p>
 </header>
 
-<div class="section poster">
-    <h2>Project Poster</h2>
-    <img src="PASTE_POSTER_LINK_HERE" alt="Project Poster">
+<div class="section card">
+    <h2>Project Overview</h2>
+    <p>
+        BRIDGE is a machine vision and blockchain research project designed to convert everyday receipts 
+        into portable, verifiable financial records. By extracting key payment information through optical 
+        character recognition and anchoring cryptographic proofs to a blockchain ledger, BRIDGE explores 
+        how receipt level data can support equitable credit scoring for underbanked communities.
+    </p>
+    <img src="PASTE_POSTER_IMAGE_LINK" alt="BRIDGE Poster" class="bridge-poster">
 </div>
 
-<div class="section bio">
-    <h2>About Me</h2>
-    <div class="photo-slot"></div>
+<div class="section card">
+    <h2>About the Researcher</h2>
+    <div class="photo-slot" style="background-image: url('MY_PHOTO');"></div>
     <p><strong>Crystal Tubbs</strong></p>
-    <p>My bio placeholder</p>
+    <p>
+        Crystal Tubbs is an AI Solutions Architect and Emerging Technologies Specialist with experience 
+        in applied AI, custom LLM agent design, model evaluation, and blockchain enhanced digital 
+        verification systems. Her academic work explores fairness, computer vision, knowledge extraction, 
+        and equitable financial technologies. She is completing her Master of Science in Artificial 
+        Intelligence at Kennesaw State University.
+    </p>
 </div>
 
-<div class="section goals">
-    <h2>My Goals and Plans</h2>
-    <p>placeholder</p>
+<div class="section card">
+    <h2>Key Findings</h2>
+    <ul>
+        <li>OCR combined with preprocessing significantly improves extraction accuracy on low quality receipts.</li>
+        <li>Recurring payments such as utilities and groceries can be reliably detected and categorized.</li>
+        <li>Blockchain anchoring of hashed receipt identifiers is low cost and preserves privacy.</li>
+        <li>Receipt based intelligence shows strong potential for decentralized credit pathways.</li>
+    </ul>
 </div>
 
-<div class="section projects">
-    <h2>Featured Work</h2>
+<div class="section card">
+    <h2>Featured Projects</h2>
     <div class="projects-grid">
+
+        <div class="project-card">
+            <h3>Project CIPHER</h3>
+            <p>Research on subliminal bias transfer and hidden signal pathways in knowledge distillation pipelines.</p>
+            <a class="btn" href="https://msmetamorphosis.github.io/Project-CIPHER/">View Project</a>
+        </div>
+
         <div class="project-card">
             <h3>NextMission Navigator</h3>
-            <p> veteran focused AI assistant. </p>
+            <p>hackathon project supporting veterans with real time resource navigation and life planning.</p>
+            <a class="btn" href="#">Coming Soon</a>
         </div>
+
         <div class="project-card">
-            <h3>Project Bloom</h3>
-            <p> AI automation and branding solution for salon franchises.</p>
+            <h3>MSAI Coursework</h3>
+            <p>Machine Vision, AI systems, and ML research completed as part of the AI graduate program.</p>
+            <a class="btn" href="#">View Portfolio</a>
         </div>
-        <div class="project-card">
-            <h3>School Projects</h3>
-            <p>placeholder for my MSAI work.</p>
-        </div>
+
     </div>
 </div>
+
+<footer>
+    Metamorphic Curations LLC • Empowering Innovation, Transforming Futures
+</footer>
 
 </body>
 </html>
